@@ -1,0 +1,38 @@
+{
+  "name": "docusaurus-plugin-includes",
+  "version": "1.0.0",
+  "description": "Include plugin for Docusaurus.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simologos/docusaurus-plugin-includes.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "loader-utils": "^2.0.0",
+    "@docusaurus/types": "^2.0.0-alpha.58",
+    "@docusaurus/utils": "^2.0.0-alpha.58"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^2.0.0-alpha.69",
+    "@tsconfig/docusaurus": "^1.0.2",
+    "@types/fs-extra": "^9.0.9",
+    "@types/loader-utils": "^2.0.2",
+    "@types/node": "^13.11.1",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=12.13.0"
+  }
+}
