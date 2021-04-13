@@ -18,5 +18,10 @@ export declare type SharedFoldersOption = {
 export declare type IncludesPluginOptions = {
     replacements: IncludeLoaderOptionReplacements;
     sharedFolders: SharedFoldersOption;
+    postBuildDeletedFolders: string[];
+};
+export declare type VersionInfo = {
+    version: string;
+    urlAddIn: string;
 };
 //# sourceMappingURL=types.d.ts.map

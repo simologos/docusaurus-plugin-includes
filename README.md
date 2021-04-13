@@ -35,7 +35,8 @@ plugins: [
         ],
         sharedFolders: [
           { source: '../../_shared', target: '../docs/shared'},
-        ]
+        ],
+        postBuildDeletedFolders: ['shared']
       },
     ],
   ],
@@ -84,5 +85,16 @@ The plugin also allows such placeholder replacements configured in `docusaurus.c
   replacements: [
     { key: '{ProductName}', value: 'My Awesome Project' },
     { key: '{SolutionName}', value: 'My Awesome Solution' },
-  ],
+  ]
+```
+
+### Delete shared folders post build from build output directory
+
+After docusaurus build, the shared folders also exist in the final build output directory, but we don't want that,
+
+The plugin can also delete configured folders from all version subfolders of docusaurus build output.
+Configure here the subfolder names (in `docs` folder of build output) that have to be deleted:
+
+```
+  postBuildDeletedFolders: ['shared']
 ```

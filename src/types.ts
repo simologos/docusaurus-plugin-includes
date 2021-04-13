@@ -16,4 +16,10 @@ export type SharedFoldersOption = {source: string, target: string}[];
 export type IncludesPluginOptions = {
     replacements: IncludeLoaderOptionReplacements,
     sharedFolders: SharedFoldersOption,
+    postBuildDeletedFolders: string[]
+}
+
+export type VersionInfo = {
+  version: string,
+  urlAddIn: string,
 }
