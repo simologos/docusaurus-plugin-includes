@@ -131,7 +131,7 @@ You can configure such placeholder replacements in `docusaurus.config.js` file.
   ]
 ```
 
-The following sample configuration adds plugin code to embed video files from assets folder with syntax `{@video: filename}` and youtube videos with syntax `{@youtube: videocode}` or `{@youtube: videoURL}`. (The youtube code in the sample is copied from [remarkable-embed youtube plugin](https://github.com/Commander-lol/remarkable-embed/blob/develop/lib/plugins/youtube.js))
+The following sample configuration adds plugin code to embed video files from assets folder with syntax `{@video: filename}` and youtube videos with syntax `{@youtube: videocode}` or `{@youtube: videoURL}`.
 
 ```
   embeds: [
