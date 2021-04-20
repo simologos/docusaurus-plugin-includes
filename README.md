@@ -6,9 +6,13 @@ Other than including files using [MDX transclusion](https://mdxjs.com/getting-st
 
 The plugin is intended to have shared content (e.g. chapters), that appears in multiple places of the same documentation, as well as shared content that is used in documentation of multiple websites.
 
+In order that docusaurus can archive all used markdown files into `versioned_docs` folder when creating a new version, the included files also have to be located inside of the docs folder. So we need to copy the files shared with other products from outside into a subfolder of docs before we can use them. The plugin can also do this copy job for configured folders.
+
+After build, the shared folders also appear in the build folder. The plugin can remove post build specific folders from build folder.
+
 Because documentation blocks shared across multiple websites often contain project specific words like the project name, the plugin can also replace placeholders with project specific replacements specified in the docusaurus configuration file.
 
-In order that docusaurus can archive all used markdown files into `versioned_docs` folder when creating a new version, the included files also have to be located inside of the docs folder. So we need to copy the files shared with other products from outside into a subfolder of docs before we can use them. The plugin can also do this copy job for configured folders.
+The plugin also supports placeholders in [remarkable-embed](https://www.npmjs.com/package/remarkable-embed) style `{@myPlugin: slug}` syntax, allowing you to embed rich content in your documents with your own JavaScript plugin function.
 
 ## Usage
 
@@ -39,7 +43,7 @@ plugins: [
           { key: '{ProductName}', value: 'My long product name for XYZ' },
           { key: '{ShortName}', value: 'XYZ' },
         ],
-        
+
         embeds: [
           {
             key: 'myAwesomePlugin',
@@ -134,7 +138,7 @@ The following sample configuration adds plugin code to embed video files from as
     {
       key: 'video',
       embedFunction: function(code) {
-        return `<video width="785" heigth="865" controls loop controlsList="nodownload">
+        return `<video width="785" height="588" controls loop controlsList="nodownload">
                   <source type="video/mp4" src={require('./assets/${code}').default}></source>
                 </video>`;
       }
