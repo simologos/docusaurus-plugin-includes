@@ -31,6 +31,12 @@ function copyFolders(
 
   const pluginLogPrefix = '[includes] ';
 
+  if (!sharedFolders) {
+    throw new Error(
+      `${pluginLogPrefix}The configuration option 'sharedFolders' is not defined.`,
+    );
+  }
+
   // First check if source folders exist
   sharedFolders.forEach(folderEntry => {
     const sourceFolder = path.resolve(siteDir, folderEntry.source);

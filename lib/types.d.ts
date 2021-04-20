@@ -5,20 +5,26 @@
  * LICENSE file in the root directory of this source tree.
  */
 export declare type IncludesLoaderOptions = {
-    replacements: IncludeLoaderOptionReplacements;
+    replacements?: IncludeLoaderOptionReplacements;
+    embeds?: IncludeLoaderOptionEmbeds;
 };
 export declare type IncludeLoaderOptionReplacements = {
     key: string;
     value: string;
 }[];
-export declare type SharedFoldersOption = {
+export declare type IncludeLoaderOptionEmbeds = {
+    key: string;
+    embedFunction(code: string): string;
+}[];
+export declare type SharedFoldersOption = undefined | {
     source: string;
     target: string;
 }[];
 export declare type IncludesPluginOptions = {
-    replacements: IncludeLoaderOptionReplacements;
-    sharedFolders: SharedFoldersOption;
-    postBuildDeletedFolders: string[];
+    replacements?: IncludeLoaderOptionReplacements;
+    sharedFolders?: SharedFoldersOption;
+    postBuildDeletedFolders?: string[];
+    embeds?: IncludeLoaderOptionEmbeds;
 };
 export declare type VersionInfo = {
     version: string;

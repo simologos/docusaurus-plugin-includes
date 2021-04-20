@@ -42,15 +42,17 @@ const markdownLoader: loader.Loader = function (source) {
 
   function replacePlaceHolders(documentContent: string) {
     var res = documentContent;
-    var placeHolders = [...options.replacements];
-    if (!placeHolders) {
-      placeHolders = [];
+    if (options.replacements) {
+      var placeHolders = [...options.replacements];
+      if (!placeHolders) {
+        placeHolders = [];
+      }
+      placeHolders.push({ key: '{ContainerMarkdown}', value: markdownFilename } );
+      placeHolders.forEach(replacement => {
+        const replacer = new RegExp(replacement.key, 'g');
+        res = res.replace(replacer, replacement.value);
+      });
     }
-    placeHolders.push({ key: '{ContainerMarkdown}', value: markdownFilename } );
-    placeHolders.forEach(replacement => {
-      const replacer = new RegExp(replacement.key, 'g');
-      res = res.replace(replacer, replacement.value);
-    });
     return res;
   }    
 

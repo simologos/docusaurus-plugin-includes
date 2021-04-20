@@ -10,7 +10,7 @@ import path from 'path';
 import {RuleSetCondition, RuleSetLoader, RuleSetUseItem} from 'webpack';
 import { cleanCopySharedFolders, copySharedFolders } from './cli';
 import { postBuildDeleteFolders } from './postBuildDeletes';
-import {IncludeLoaderOptionReplacements, IncludesLoaderOptions, IncludesPluginOptions, SharedFoldersOption} from './types';
+import {IncludeLoaderOptionEmbeds, IncludeLoaderOptionReplacements, IncludesLoaderOptions, IncludesPluginOptions, SharedFoldersOption} from './types';
 
 export default function (
   context: LoadContext,
@@ -45,7 +45,8 @@ export default function (
       }
 
       const loaderOptions:IncludesLoaderOptions = {
-        replacements: pluginOptions.replacements as IncludeLoaderOptionReplacements
+        replacements: pluginOptions.replacements as IncludeLoaderOptionReplacements,
+        embeds: pluginOptions.embeds as IncludeLoaderOptionEmbeds
       }
 
       return {

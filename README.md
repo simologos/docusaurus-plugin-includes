@@ -29,14 +29,25 @@ plugins: [
     [
       'docusaurus-plugin-includes',
       {
+        sharedFolders: [
+          { source: '../../_shared', target: '../docs/shared'},
+        ],
+
+        postBuildDeletedFolders: ['shared'],
+
         replacements: [
           { key: '{ProductName}', value: 'My long product name for XYZ' },
           { key: '{ShortName}', value: 'XYZ' },
         ],
-        sharedFolders: [
-          { source: '../../_shared', target: '../docs/shared'},
-        ],
-        postBuildDeletedFolders: ['shared']
+        
+        embeds: [
+          {
+            key: 'myAwesomePlugin',
+            embedFunction: function(code) { 
+              return `...`;
+            }
+          }
+        ]
       },
     ],
   ],
@@ -75,6 +86,17 @@ The folders to copy can be configured in plugins configuration in `docusaurus.co
 
 Source and target path are defined relative to the website folder where also the file `docusaurus.config.js` is located.
 
+### Delete shared folders post build from build output directory
+
+After docusaurus build, the shared folders also exist in the final build output directory, but we don't want that,
+
+The plugin can also delete configured folders from all version subfolders of docusaurus build output.
+Configure here the subfolder names (in `docs` folder of build output) that have to be deleted:
+
+```
+  postBuildDeletedFolders: ['shared']
+```
+
 ### Replace placeholders
 
 Because we often need the product name or the CRM name in the documentation, we need the possibility to add placeholders in the shared markdown files that will be replaced with the value for the current product.
@@ -88,13 +110,40 @@ The plugin also allows such placeholder replacements configured in `docusaurus.c
   ]
 ```
 
-### Delete shared folders post build from build output directory
+### Replace `remarkable-embed` style placeholders
 
-After docusaurus build, the shared folders also exist in the final build output directory, but we don't want that,
+The plugin also supports placeholders in [remarkable-embed](https://www.npmjs.com/package/remarkable-embed) style `{@myPlugin: slug}` syntax, allowing you to embed rich content in your documents with your own JavaScript plugin function.
 
-The plugin can also delete configured folders from all version subfolders of docusaurus build output.
-Configure here the subfolder names (in `docs` folder of build output) that have to be deleted:
+You can configure such placeholder replacements in `docusaurus.config.js` file.
 
 ```
-  postBuildDeletedFolders: ['shared']
+  embeds: [
+    {
+      key: 'myAwesomePlugin',
+      embedFunction: function(code) { 
+        return `...`;
+      }
+    }
+  ]
+```
+
+The following sample configuration adds plugin code to embed video files from assets folder with syntax `{@video: filename}` and youtube videos with syntax `{@youtube: videocode}` or `{@youtube: videoURL}`. (The youtube code in the sample is copied from [remarkable-embed youtube plugin](https://github.com/Commander-lol/remarkable-embed/blob/develop/lib/plugins/youtube.js))
+
+```
+  embeds: [
+    {
+      key: 'video',
+      embedFunction: function(code) {
+        return `<video width="785" heigth="865" controls loop controlsList="nodownload">
+                  <source type="video/mp4" src={require('./assets/${code}').default}></source>
+                </video>`;
+      }
+    },
+    {
+      key: 'youtube',
+      embedFunction: function(code) {
+        return '<iframe width="785" height="440" type="text/html" frameborder="0" src="https://www.youtube.com/embed/' + code + '"></iframe>'
+      }
+    }
+  ]
 ```

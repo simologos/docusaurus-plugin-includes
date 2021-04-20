@@ -6,17 +6,21 @@
  */
 
 export type IncludesLoaderOptions = {
-    replacements: IncludeLoaderOptionReplacements
+    replacements?: IncludeLoaderOptionReplacements,
+    embeds?: IncludeLoaderOptionEmbeds
 };
 
 export type IncludeLoaderOptionReplacements = {key: string, value: string}[];
 
-export type SharedFoldersOption = {source: string, target: string}[];
+export type IncludeLoaderOptionEmbeds = {key: string, embedFunction(code:string): string }[];
+
+export type SharedFoldersOption = undefined | {source: string, target: string}[];
 
 export type IncludesPluginOptions = {
-    replacements: IncludeLoaderOptionReplacements,
-    sharedFolders: SharedFoldersOption,
-    postBuildDeletedFolders: string[]
+    replacements?: IncludeLoaderOptionReplacements,
+    sharedFolders?: SharedFoldersOption,
+    postBuildDeletedFolders?: string[],
+    embeds?: IncludeLoaderOptionEmbeds
 }
 
 export type VersionInfo = {

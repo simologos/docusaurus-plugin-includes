@@ -147,8 +147,8 @@
         "affectsGlobalScope": true
       },
       "../src/types.ts": {
-        "version": "232c9ab32d9e56db56460abeac85cccc05319118461e3b46fd805d5be32fd403",
-        "signature": "949848a3e7a9c14cb71c8c0bbd5f56515ab93fe7aafb76bb323938c04fa3252f",
+        "version": "96e2a6c69e3b0236db97e2b16690736163001020346973b32572a6aa30efc195",
+        "signature": "fab4a15e0bdbbf0f9c5ab4ffe6c7f7df4f5ff20b7b83c46f3ce3dd3562961e86",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -387,8 +387,8 @@
         "affectsGlobalScope": false
       },
       "../src/cli.ts": {
-        "version": "5bb410f1c4dcab708d6227cdda2c3ee835d1cd54e30550294aa27398f43f70e7",
-        "signature": "400078e97e376f3d01d3a414a17081e5afdcad7831d4e8e9cc348d34903f0d04",
+        "version": "157446fd9415fd2d6a81a9af884a643d49a4d9bf419ea4815d99e47ff26cc11a",
+        "signature": "2117d87bfeb1b3eb95c4ab8c436d1d625ce9f98390ed449b9ec23b9bb878bba3",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/tapable/index.d.ts": {
@@ -492,12 +492,12 @@
         "affectsGlobalScope": false
       },
       "../src/includes.ts": {
-        "version": "452827aeea835e7d64778bb90dfcef5d7a3b7faf2dee9b896260f7db551d9717",
+        "version": "78b6da02c8f26458a4667cfee6759f22cb6f03565b78c451cf9208b53656cfc5",
         "signature": "8aa9b063abf81d8c4e62cafbda8f3f395d6c68fc92911f2761572d572db10606",
         "affectsGlobalScope": false
       },
       "../src/includesloader.ts": {
-        "version": "452827aeea835e7d64778bb90dfcef5d7a3b7faf2dee9b896260f7db551d9717",
+        "version": "2a6cd367f8101e321b298fb9e79cdd167098be2154a08449704b931b695daa94",
         "signature": "efc008144fbc15c837c4321087bdb3b5b3f9f570df806ed1b7e4db81e9d16d62",
         "affectsGlobalScope": false
       },
@@ -557,12 +557,12 @@
         "affectsGlobalScope": false
       },
       "../src/postbuilddeletes.ts": {
-        "version": "967de374ac07559a5666f457f4443acabf1bcdea66a591317bb65e33e247dc71",
-        "signature": "5e1997dc7ce997799cec26984734638d3f5c26973f6fca415cddf7f112a8a297",
+        "version": "2573998a6141bd127351f84a5a408314765b08d8dd05dfd69bd5deb5dacd8fcb",
+        "signature": "d2890c4619045bbfa07f3877662341d5f673a42191919e7bcdc06eceaed1a998",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "7abae8d1c6e539dbdc308101e7f81eddfdf489a7df6697a2a14cde6d2eef800e",
+        "version": "75c43282b73902d1ec60f532b6fca291533403f8efe61eac706115749f49ee5b",
         "signature": "e1348a97058672b277e51f6a4fea1ecbc7ff7e59968800972bca859611cf3be4",
         "affectsGlobalScope": false
       },
