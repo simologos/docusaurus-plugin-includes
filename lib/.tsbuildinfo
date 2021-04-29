@@ -147,8 +147,8 @@
         "affectsGlobalScope": true
       },
       "../src/types.ts": {
-        "version": "96e2a6c69e3b0236db97e2b16690736163001020346973b32572a6aa30efc195",
-        "signature": "fab4a15e0bdbbf0f9c5ab4ffe6c7f7df4f5ff20b7b83c46f3ce3dd3562961e86",
+        "version": "d5b7d2d11ae9dde81c76f65b9858d2f3d14a4bfb6377b496c7db39678d15630a",
+        "signature": "ad02ba79ad2963d9fc9c858bc276b0ecfdb449b205b69359e163e4814932ed8f",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -377,8 +377,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/index.d.ts": {
-        "version": "9c4c395e927045b324877acdc4bfb95f128f36bc9f073266a2f0342495075a4f",
-        "signature": "9c4c395e927045b324877acdc4bfb95f128f36bc9f073266a2f0342495075a4f",
+        "version": "6c137dee82a61e14a1eb6a0ba56925b66fd83abf15acf72fe59a10b15e80e319",
+        "signature": "6c137dee82a61e14a1eb6a0ba56925b66fd83abf15acf72fe59a10b15e80e319",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/fs-extra/index.d.ts": {
@@ -387,7 +387,7 @@
         "affectsGlobalScope": false
       },
       "../src/cli.ts": {
-        "version": "157446fd9415fd2d6a81a9af884a643d49a4d9bf419ea4815d99e47ff26cc11a",
+        "version": "699c400894f80e71ae63c7645351e6153b8d75f5d0976cfe9c8cf28e82489d3c",
         "signature": "2117d87bfeb1b3eb95c4ab8c436d1d625ce9f98390ed449b9ec23b9bb878bba3",
         "affectsGlobalScope": false
       },
@@ -396,7 +396,7 @@
         "signature": "d558a0fe921ebcc88d3212c2c42108abf9f0d694d67ebdeba37d7728c044f579",
         "affectsGlobalScope": false
       },
-      "../node_modules/source-map/source-map.d.ts": {
+      "../node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts": {
         "version": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579",
         "signature": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579",
         "affectsGlobalScope": false
@@ -406,9 +406,14 @@
         "signature": "bee79f5862fe1278d2ba275298862bce3f7abf1e59d9c669c4b9a4b2bba96956",
         "affectsGlobalScope": false
       },
-      "../node_modules/@types/anymatch/index.d.ts": {
-        "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
-        "signature": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
+      "../node_modules/anymatch/index.d.ts": {
+        "version": "4fb0b7d532aa6fb850b6cd2f1ee4f00802d877b5c66a51903bc1fb0624126349",
+        "signature": "4fb0b7d532aa6fb850b6cd2f1ee4f00802d877b5c66a51903bc1fb0624126349",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/webpack/node_modules/source-map/source-map.d.ts": {
+        "version": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579",
+        "signature": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts": {
@@ -487,8 +492,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/loader-utils/index.d.ts": {
-        "version": "6d0e56e4891c8f5cb526c8dbc1a8260a2f07479385db9047aff29f8a5047d90e",
-        "signature": "6d0e56e4891c8f5cb526c8dbc1a8260a2f07479385db9047aff29f8a5047d90e",
+        "version": "fbd29ea9dd64c69ded0284cb1307557e8f7bf6265ce2bf1faa3840ffed2d38ac",
+        "signature": "fbd29ea9dd64c69ded0284cb1307557e8f7bf6265ce2bf1faa3840ffed2d38ac",
         "affectsGlobalScope": false
       },
       "../src/includes.ts": {
@@ -501,44 +506,9 @@
         "signature": "efc008144fbc15c837c4321087bdb3b5b3f9f570df806ed1b7e4db81e9d16d62",
         "affectsGlobalScope": false
       },
-      "../node_modules/@docusaurus/types/node_modules/commander/typings/index.d.ts": {
+      "../node_modules/commander/typings/index.d.ts": {
         "version": "c72b982add26c5ddf410899bcafe3f47253a5d274d4b93d2ef67850d4af4545b",
         "signature": "c72b982add26c5ddf410899bcafe3f47253a5d274d4b93d2ef67850d4af4545b",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/webpack-merge/node_modules/@types/estree/index.d.ts": {
-        "version": "745a853d60bf782583a58584f59e202cae5c7a898b0c92696442602a3ef17a87",
-        "signature": "745a853d60bf782583a58584f59e202cae5c7a898b0c92696442602a3ef17a87",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/json-schema/index.d.ts": {
-        "version": "3a1e165b22a1cb8df82c44c9a09502fd2b33f160cd277de2cd3a055d8e5c6b27",
-        "signature": "3a1e165b22a1cb8df82c44c9a09502fd2b33f160cd277de2cd3a055d8e5c6b27",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/ajv/lib/ajv.d.ts": {
-        "version": "67f129ed8b372622ff36b8b10e39d03e09e363a5ff7821105f92f085b8d1ccba",
-        "signature": "67f129ed8b372622ff36b8b10e39d03e09e363a5ff7821105f92f085b8d1ccba",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/schema-utils/declarations/validate.d.ts": {
-        "version": "62a05210201c793349ec28254f06a01814c5b4f5591f6d1921941286db78ea2a",
-        "signature": "62a05210201c793349ec28254f06a01814c5b4f5591f6d1921941286db78ea2a",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/schema-utils/declarations/validationerror.d.ts": {
-        "version": "327f42ab31ff4539ba868d0374f8825af328b104b5f78d26b2e3ce9cc17b43a0",
-        "signature": "327f42ab31ff4539ba868d0374f8825af328b104b5f78d26b2e3ce9cc17b43a0",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/webpack-merge/node_modules/tapable/tapable.d.ts": {
-        "version": "b395ec0779c66de885f97974534e95ee2c8bbf9acaf5857a6782ddc32972b6d8",
-        "signature": "b395ec0779c66de885f97974534e95ee2c8bbf9acaf5857a6782ddc32972b6d8",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@types/webpack-merge/node_modules/webpack/types.d.ts": {
-        "version": "3f2ab235b2e277e22c6346814c17d434c6482209f02d79796653130c00cf61ed",
-        "signature": "3f2ab235b2e277e22c6346814c17d434c6482209f02d79796653130c00cf61ed",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/webpack-merge/index.d.ts": {
@@ -557,12 +527,12 @@
         "affectsGlobalScope": false
       },
       "../src/postbuilddeletes.ts": {
-        "version": "2573998a6141bd127351f84a5a408314765b08d8dd05dfd69bd5deb5dacd8fcb",
+        "version": "77b9a8b29750be07d40281239dbceb643cffcdd2fb17764c407eb4a50472fb5e",
         "signature": "d2890c4619045bbfa07f3877662341d5f673a42191919e7bcdc06eceaed1a998",
         "affectsGlobalScope": false
       },
       "../src/index.ts": {
-        "version": "75c43282b73902d1ec60f532b6fca291533403f8efe61eac706115749f49ee5b",
+        "version": "029f9db90df788bcf7cf2dccbf2f66b1533033a178b7b0f8635dec4f0966d6eb",
         "signature": "e1348a97058672b277e51f6a4fea1ecbc7ff7e59968800972bca859611cf3be4",
         "affectsGlobalScope": false
       },
@@ -590,6 +560,11 @@
         "version": "5d708266116e778d6a4140fca2ac36f71d99b4c68bc3be63a45ba8bf5ade5348",
         "signature": "5d708266116e778d6a4140fca2ac36f71d99b4c68bc3be63a45ba8bf5ade5348",
         "affectsGlobalScope": true
+      },
+      "../node_modules/@types/react-helmet/index.d.ts": {
+        "version": "370aa0007632db53c67e21c1584fb998c8af918ca1d38688b044b4ce3d0524c0",
+        "signature": "370aa0007632db53c67e21c1584fb998c8af918ca1d38688b044b4ce3d0524c0",
+        "affectsGlobalScope": false
       },
       "../node_modules/@types/history/domutils.d.ts": {
         "version": "271cde49dfd9b398ccc91bb3aaa43854cf76f4d14e10fed91cbac649aa6cbc63",
@@ -636,14 +611,9 @@
         "signature": "b89701b714364b5bcb0b58e83725aa02a4f41df8357000b4e8fe60566bf805ac",
         "affectsGlobalScope": false
       },
-      "../node_modules/@types/react-helmet/index.d.ts": {
-        "version": "370aa0007632db53c67e21c1584fb998c8af918ca1d38688b044b4ce3d0524c0",
-        "signature": "370aa0007632db53c67e21c1584fb998c8af918ca1d38688b044b4ce3d0524c0",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@docusaurus/module-type-aliases/src/index.d.ts": {
-        "version": "6935eed355f5ac03584a68dc153aaa09caf63d1e365e7cf8eb54bc57df01ed5f",
-        "signature": "6935eed355f5ac03584a68dc153aaa09caf63d1e365e7cf8eb54bc57df01ed5f",
+        "version": "4a5d1730b5ce1a56aafd3f9bf19d58e6eb6ba4361051a77e63e9464928588b65",
+        "signature": "4a5d1730b5ce1a56aafd3f9bf19d58e6eb6ba4361051a77e63e9464928588b65",
         "affectsGlobalScope": false
       }
     },
@@ -690,10 +660,10 @@
         "../node_modules/@types/react/index.d.ts"
       ],
       "../node_modules/@docusaurus/types/src/index.d.ts": [
-        "../node_modules/@docusaurus/types/node_modules/commander/typings/index.d.ts",
         "../node_modules/@types/node/querystring.d.ts",
         "../node_modules/@types/webpack-merge/index.d.ts",
         "../node_modules/@types/webpack/index.d.ts",
+        "../node_modules/commander/typings/index.d.ts",
         "../node_modules/joi/lib/index.d.ts"
       ],
       "../node_modules/@types/fs-extra/index.d.ts": [
@@ -976,17 +946,10 @@
         "../node_modules/csstype/index.d.ts"
       ],
       "../node_modules/@types/uglify-js/index.d.ts": [
-        "../node_modules/source-map/source-map.d.ts"
+        "../node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts"
       ],
       "../node_modules/@types/webpack-merge/index.d.ts": [
-        "../node_modules/@types/webpack-merge/node_modules/webpack/types.d.ts"
-      ],
-      "../node_modules/@types/webpack-merge/node_modules/webpack/types.d.ts": [
-        "../node_modules/@types/json-schema/index.d.ts",
-        "../node_modules/@types/webpack-merge/node_modules/@types/estree/index.d.ts",
-        "../node_modules/@types/webpack-merge/node_modules/tapable/tapable.d.ts",
-        "../node_modules/schema-utils/declarations/validate.d.ts",
-        "../node_modules/schema-utils/declarations/validationerror.d.ts"
+        "../node_modules/@types/webpack/index.d.ts"
       ],
       "../node_modules/@types/webpack-sources/index.d.ts": [
         "../node_modules/@types/node/index.d.ts",
@@ -1062,23 +1025,13 @@
         "../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts"
       ],
       "../node_modules/@types/webpack/index.d.ts": [
-        "../node_modules/@types/anymatch/index.d.ts",
         "../node_modules/@types/node/crypto.d.ts",
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/tapable/index.d.ts",
         "../node_modules/@types/uglify-js/index.d.ts",
+        "../node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts",
         "../node_modules/@types/webpack-sources/index.d.ts",
-        "../node_modules/source-map/source-map.d.ts"
-      ],
-      "../node_modules/schema-utils/declarations/validate.d.ts": [
-        "../node_modules/@types/json-schema/index.d.ts",
-        "../node_modules/ajv/lib/ajv.d.ts",
-        "../node_modules/schema-utils/declarations/validationerror.d.ts"
-      ],
-      "../node_modules/schema-utils/declarations/validationerror.d.ts": [
-        "../node_modules/@types/json-schema/index.d.ts",
-        "../node_modules/ajv/lib/ajv.d.ts",
-        "../node_modules/schema-utils/declarations/validate.d.ts"
+        "../node_modules/anymatch/index.d.ts"
       ],
       "../src/cli.ts": [
         "../node_modules/@types/fs-extra/index.d.ts",
@@ -1409,13 +1362,6 @@
       "../node_modules/@types/webpack-merge/index.d.ts": [
         "../node_modules/@types/webpack-merge/node_modules/webpack/types.d.ts"
       ],
-      "../node_modules/@types/webpack-merge/node_modules/webpack/types.d.ts": [
-        "../node_modules/@types/json-schema/index.d.ts",
-        "../node_modules/@types/webpack-merge/node_modules/@types/estree/index.d.ts",
-        "../node_modules/@types/webpack-merge/node_modules/tapable/tapable.d.ts",
-        "../node_modules/schema-utils/declarations/validate.d.ts",
-        "../node_modules/schema-utils/declarations/validationerror.d.ts"
-      ],
       "../node_modules/@types/webpack-sources/index.d.ts": [
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/webpack-sources/lib/cachedsource.d.ts",
@@ -1498,16 +1444,6 @@
         "../node_modules/@types/webpack-sources/index.d.ts",
         "../node_modules/source-map/source-map.d.ts"
       ],
-      "../node_modules/schema-utils/declarations/validate.d.ts": [
-        "../node_modules/@types/json-schema/index.d.ts",
-        "../node_modules/ajv/lib/ajv.d.ts",
-        "../node_modules/schema-utils/declarations/validationerror.d.ts"
-      ],
-      "../node_modules/schema-utils/declarations/validationerror.d.ts": [
-        "../node_modules/@types/json-schema/index.d.ts",
-        "../node_modules/ajv/lib/ajv.d.ts",
-        "../node_modules/schema-utils/declarations/validate.d.ts"
-      ],
       "../src/cli.ts": [
         "../src/types.ts"
       ],
@@ -1524,9 +1460,7 @@
     },
     "semanticDiagnosticsPerFile": [
       "../node_modules/@docusaurus/module-type-aliases/src/index.d.ts",
-      "../node_modules/@docusaurus/types/node_modules/commander/typings/index.d.ts",
       "../node_modules/@docusaurus/types/src/index.d.ts",
-      "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@types/fs-extra/index.d.ts",
       "../node_modules/@types/history/createbrowserhistory.d.ts",
       "../node_modules/@types/history/createhashhistory.d.ts",
@@ -1535,7 +1469,6 @@
       "../node_modules/@types/history/index.d.ts",
       "../node_modules/@types/history/locationutils.d.ts",
       "../node_modules/@types/history/pathutils.d.ts",
-      "../node_modules/@types/json-schema/index.d.ts",
       "../node_modules/@types/loader-utils/index.d.ts",
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/async_hooks.d.ts",
@@ -1593,10 +1526,8 @@
       "../node_modules/@types/source-list-map/index.d.ts",
       "../node_modules/@types/tapable/index.d.ts",
       "../node_modules/@types/uglify-js/index.d.ts",
+      "../node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts",
       "../node_modules/@types/webpack-merge/index.d.ts",
-      "../node_modules/@types/webpack-merge/node_modules/@types/estree/index.d.ts",
-      "../node_modules/@types/webpack-merge/node_modules/tapable/tapable.d.ts",
-      "../node_modules/@types/webpack-merge/node_modules/webpack/types.d.ts",
       "../node_modules/@types/webpack-sources/index.d.ts",
       "../node_modules/@types/webpack-sources/lib/cachedsource.d.ts",
       "../node_modules/@types/webpack-sources/lib/compatsource.d.ts",
@@ -1611,12 +1542,11 @@
       "../node_modules/@types/webpack-sources/lib/sourcemapsource.d.ts",
       "../node_modules/@types/webpack-sources/node_modules/source-map/source-map.d.ts",
       "../node_modules/@types/webpack/index.d.ts",
-      "../node_modules/ajv/lib/ajv.d.ts",
+      "../node_modules/@types/webpack/node_modules/source-map/source-map.d.ts",
+      "../node_modules/anymatch/index.d.ts",
+      "../node_modules/commander/typings/index.d.ts",
       "../node_modules/csstype/index.d.ts",
       "../node_modules/joi/lib/index.d.ts",
-      "../node_modules/schema-utils/declarations/validate.d.ts",
-      "../node_modules/schema-utils/declarations/validationerror.d.ts",
-      "../node_modules/source-map/source-map.d.ts",
       "../node_modules/typescript/lib/lib.dom.d.ts",
       "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "../node_modules/typescript/lib/lib.es2015.core.d.ts",

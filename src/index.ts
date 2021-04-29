@@ -65,6 +65,13 @@ export default function (
       };
     },
 
+    injectHtmlTags() {
+        if (pluginOptions.injectedHtmlTags) {
+          return pluginOptions.injectedHtmlTags;
+        }
+      return {};
+    },
+
     extendCli(cli) {
 
       cli

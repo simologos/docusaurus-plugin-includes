@@ -51,7 +51,10 @@ plugins: [
               return `...`;
             }
           }
-        ]
+        ],
+        injectedHtmlTags: {
+          preBodyTags: [`<link rel="stylesheet" href="https://cdn.example.com/style.css" type="text/css">`]
+        }
       },
     ],
   ],
@@ -150,4 +153,22 @@ The following sample configuration adds plugin code to embed video files from as
       }
     }
   ]
+```
+
+### Inject HTML Tags
+Inject head and/or body HTML tags to Docusaurus generated HTML.
+
+The following 3 identifiers can be used and they are all optional:
+* headTags
+* preBodyTags
+* postBodyTags
+
+See https://docusaurus.io/docs/lifecycle-apis#injecthtmltags for more information.
+
+In the following example a CSS file gets loaded in the head tag and a h1 tag gets added to the body:
+```
+  injectedHtmlTags: {
+    headTags: [`<link rel="stylesheet" href="https://cdn.example.com/style.css" type="text/css">`],
+    preBodyTags: [`<h1>Test</h1>`]
+  }
 ```
