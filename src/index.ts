@@ -22,6 +22,7 @@ export default function (
     name: 'docusaurus-plugin-includes',
 
     configureWebpack(config, _isServer, _utils) {
+      const pluginContentDocsPath = path.join('plugin-content-docs', 'lib', 'markdown', 'index.js');
       let docsPluginInclude:RuleSetCondition = [];
       if (config.module) {
         var foundContentDocsPlugin = false;
@@ -32,7 +33,7 @@ export default function (
             useArray.forEach(useItem => {
               const useSetLoader = useItem as RuleSetLoader;
               if (useSetLoader && useSetLoader.loader) {
-                if (useSetLoader.loader.endsWith('plugin-content-docs\\lib\\markdown\\index.js')) {
+                if (useSetLoader.loader.endsWith(pluginContentDocsPath)) {
                   foundContentDocsPlugin = true;
                 }
               }

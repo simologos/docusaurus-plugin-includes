@@ -9,6 +9,7 @@ import {getOptions} from 'loader-utils';
 import {loader} from 'webpack';
 import {IncludesLoaderOptions} from './types';
 import fs from 'fs';
+import path from 'path';
  
 const markdownLoader: loader.Loader = function (source) {
 
@@ -16,8 +17,8 @@ const markdownLoader: loader.Loader = function (source) {
   const callback = this.async();
 
   const options = getOptions(this) as unknown as IncludesLoaderOptions;
-  const markdownFilename = this.resourcePath.substring(this.resourcePath.lastIndexOf('\\')+1);
-  const markdownFilepath = this.resourcePath.substring(0, this.resourcePath.length - markdownFilename.length);
+  const markdownFilename = path.basename(this.resourcePath);
+  const markdownFilepath = path.dirname(this.resourcePath);
 
   function addMarkdownIncludes(fileContent: string) {
     var res = fileContent;
@@ -27,14 +28,14 @@ const markdownLoader: loader.Loader = function (source) {
         const replacer = new RegExp(match, 'g');
         if (match.startsWith('{@include: ')) {
           const includeFile = match.substring(11, match.length-1);
-          const fullPath = `${markdownFilepath}${includeFile}`;
+          const fullPath = path.join(markdownFilepath, includeFile);
           if (fs.existsSync(fullPath)) {
             var includeFileContent = fs.readFileSync(fullPath, "utf8");
             res = res.replace(replacer, includeFileContent);
             res = addMarkdownIncludes(res);
           }
           else {
-            res = res.replace(replacer, `\n> include file not found: ${fullPath}\n`);
+            res = res.replace(replacer, `\n> include file not found: ${includeFile} --> ${fullPath}\n`);
           }
         }
         else {
