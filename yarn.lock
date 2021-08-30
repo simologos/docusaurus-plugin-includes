@@ -979,7 +979,7 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@docusaurus/core@^2.0.0-alpha.72":
+"@docusaurus/core@^2.0.0-beta.5":
   version "2.0.0-beta.5"
   resolved "https://packages.bucher-suter.lan/npm/npm-bs/@docusaurus/core/-/core-2.0.0-beta.5.tgz#a8ccb489d75f777de59fdb698f93de9263928594"
   integrity sha1-qMy0iddfd33ln9tpj5PekmOShZQ=
@@ -1073,7 +1073,7 @@
     postcss "^8.2.15"
     postcss-sort-media-queries "^3.10.11"
 
-"@docusaurus/module-type-aliases@^2.0.0-alpha.72":
+"@docusaurus/module-type-aliases@^2.0.0-beta.5":
   version "2.0.0-beta.5"
   resolved "https://packages.bucher-suter.lan/npm/npm-bs/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-beta.5.tgz#d215c9dd4f64ee9b9d41d28983ca72735319746a"
   integrity sha1-0hXJ3U9k7pudQdKJg8pyc1MZdGo=
@@ -1085,7 +1085,7 @@
   dependencies:
     prop-types "^15.6.2"
 
-"@docusaurus/types@2.0.0-beta.5", "@docusaurus/types@^2.0.0-alpha.72":
+"@docusaurus/types@2.0.0-beta.5", "@docusaurus/types@^2.0.0-beta.5":
   version "2.0.0-beta.5"
   resolved "https://packages.bucher-suter.lan/npm/npm-bs/@docusaurus/types/-/types-2.0.0-beta.5.tgz#668ddfaa7f23d74522a58aac99d62436b555fbc6"
   integrity sha1-Zo3fqn8j10UipYqsmdYkNrVV+8Y=
@@ -1114,7 +1114,7 @@
     joi "^17.4.0"
     tslib "^2.1.0"
 
-"@docusaurus/utils@2.0.0-beta.5", "@docusaurus/utils@^2.0.0-alpha.72":
+"@docusaurus/utils@2.0.0-beta.5", "@docusaurus/utils@^2.0.0-beta.5":
   version "2.0.0-beta.5"
   resolved "https://packages.bucher-suter.lan/npm/npm-bs/@docusaurus/utils/-/utils-2.0.0-beta.5.tgz#68859f070ca6bf7875f4a4121e314269211a876b"
   integrity sha1-aIWfBwymv3h19KQSHjFCaSEah2s=

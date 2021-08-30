@@ -7,7 +7,7 @@
 
 import { LoadContext, Plugin } from '@docusaurus/types';
 import path from 'path';
-import { RuleSetCondition } from 'webpack';
+import { RuleSetCondition, RuleSetUseItem } from 'webpack';
 import { cleanCopySharedFolders, copySharedFolders } from './cli';
 import { postBuildDeleteFolders } from './postBuildDeletes';
 import { IncludeLoaderOptionEmbeds, IncludeLoaderOptionReplacements, IncludesLoaderOptions, IncludesPluginOptions, SharedFoldersOption } from './types';
@@ -34,12 +34,10 @@ export default function (
 
           if (!foundContentDocsPlugin && rule.use && rule.include) {
             const includesArray = rule.include as RuleSetCondition[];
-            // todo: proper typing
-            const useArray = rule.use as any[];
+            const useArray = rule.use as RuleSetUseItem[];
             useArray.forEach(useItem => {
-              const useSetLoader = useItem
-              if (useSetLoader && useSetLoader.loader) {
-                if (useSetLoader.loader.endsWith(pluginContentDocsPath)) {
+              if (typeof useItem == 'object' && useItem.loader) {
+                if (useItem.loader.endsWith(pluginContentDocsPath)) {
                   foundContentDocsPlugin = true;
                 }
               }
