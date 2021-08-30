@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {LoadContext, Plugin} from '@docusaurus/types';
+import { LoadContext, Plugin } from '@docusaurus/types';
 import path from 'path';
-import {RuleSetCondition, RuleSetLoader, RuleSetUseItem} from 'webpack';
+import { RuleSetCondition } from 'webpack';
 import { cleanCopySharedFolders, copySharedFolders } from './cli';
 import { postBuildDeleteFolders } from './postBuildDeletes';
-import {IncludeLoaderOptionEmbeds, IncludeLoaderOptionReplacements, IncludesLoaderOptions, IncludesPluginOptions, SharedFoldersOption} from './types';
+import { IncludeLoaderOptionEmbeds, IncludeLoaderOptionReplacements, IncludesLoaderOptions, IncludesPluginOptions, SharedFoldersOption } from './types';
 
 export default function (
   context: LoadContext,
@@ -23,15 +23,21 @@ export default function (
 
     configureWebpack(config, _isServer, _utils) {
       const pluginContentDocsPath = path.join('plugin-content-docs', 'lib', 'markdown', 'index.js');
-      let docsPluginInclude:RuleSetCondition = [];
-      if (config.module) {
+      let docsPluginInclude: RuleSetCondition = [];
+      if (config.module && config.module.rules) {
         var foundContentDocsPlugin = false;
         config.module.rules.forEach(rule => {
+
+          if (rule === "...") {
+            return;
+          }
+
           if (!foundContentDocsPlugin && rule.use && rule.include) {
             const includesArray = rule.include as RuleSetCondition[];
-            const useArray = rule.use as RuleSetUseItem[];
+            // todo: proper typing
+            const useArray = rule.use as any[];
             useArray.forEach(useItem => {
-              const useSetLoader = useItem as RuleSetLoader;
+              const useSetLoader = useItem
               if (useSetLoader && useSetLoader.loader) {
                 if (useSetLoader.loader.endsWith(pluginContentDocsPath)) {
                   foundContentDocsPlugin = true;
@@ -45,31 +51,31 @@ export default function (
         });
       }
 
-      const loaderOptions:IncludesLoaderOptions = {
+      const loaderOptions: IncludesLoaderOptions = {
         replacements: pluginOptions.replacements as IncludeLoaderOptionReplacements,
         embeds: pluginOptions.embeds as IncludeLoaderOptionEmbeds
       }
 
       return {
-          module: {
-              rules: [{
-                  test: /(\.mdx?)$/,
-                  include: docsPluginInclude,
-                  use: [
-                      {
-                          loader: path.resolve(__dirname, './includesLoader.js'),
-                          options: loaderOptions,
-                      },
-                  ],
-              }],
-          },
+        module: {
+          rules: [{
+            test: /(\.mdx?)$/,
+            include: docsPluginInclude,
+            use: [
+              {
+                loader: path.resolve(__dirname, './includesLoader.js'),
+                options: loaderOptions,
+              },
+            ],
+          }],
+        },
       };
     },
 
     injectHtmlTags() {
-        if (pluginOptions.injectedHtmlTags) {
-          return pluginOptions.injectedHtmlTags;
-        }
+      if (pluginOptions.injectedHtmlTags) {
+        return pluginOptions.injectedHtmlTags;
+      }
       return {};
     },
 

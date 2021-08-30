@@ -5,18 +5,23 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {getOptions} from 'loader-utils';
-import {loader} from 'webpack';
 import {IncludesLoaderOptions} from './types';
 import fs from 'fs';
 import path from 'path';
+
+// TODO temporary until Webpack5 export this type
+// see https://github.com/webpack/webpack/issues/11630
+interface Loader extends Function {
+  (this: any, source: string): string | Buffer | void | undefined;
+}
  
-const markdownLoader: loader.Loader = function (source) {
+const markdownLoader: Loader = function (source) {
 
   let fileString = source as string;
   const callback = this.async();
 
-  const options = getOptions(this) as unknown as IncludesLoaderOptions;
+  // Todo: Check if this still works...
+  const options = this.getOptions() as unknown as IncludesLoaderOptions;
   const markdownFilename = path.basename(this.resourcePath);
   const markdownFilepath = path.dirname(this.resourcePath);
 
