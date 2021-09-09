@@ -51,7 +51,8 @@ export default function (
 
       const loaderOptions: IncludesLoaderOptions = {
         replacements: pluginOptions.replacements as IncludeLoaderOptionReplacements,
-        embeds: pluginOptions.embeds as IncludeLoaderOptionEmbeds
+        embeds: pluginOptions.embeds as IncludeLoaderOptionEmbeds,
+        sharedFolders: pluginOptions.sharedFolders
       }
 
       return {

@@ -7,6 +7,7 @@
 export declare type IncludesLoaderOptions = {
     replacements?: IncludeLoaderOptionReplacements;
     embeds?: IncludeLoaderOptionEmbeds;
+    sharedFolders: SharedFoldersOption;
 };
 declare type HtmlTags = string | HtmlTagObject | (string | HtmlTagObject)[];
 interface HtmlTagObject {

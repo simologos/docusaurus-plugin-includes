@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {IncludesLoaderOptions} from './types';
+import { IncludesLoaderOptions } from './types';
 import fs from 'fs';
 import path from 'path';
 
@@ -14,16 +14,22 @@ import path from 'path';
 interface Loader extends Function {
   (this: any, source: string): string | Buffer | void | undefined;
 }
- 
+
 const markdownLoader: Loader = function (source) {
 
   let fileString = source as string;
   const callback = this.async();
 
-  // Todo: Check if this still works...
   const options = this.getOptions() as unknown as IncludesLoaderOptions;
   const markdownFilename = path.basename(this.resourcePath);
   const markdownFilepath = path.dirname(this.resourcePath);
+
+  if (
+    options.sharedFolders &&
+    options.sharedFolders.find(e => this.resourcePath.indexOf(path.resolve(e.target)) === 0)
+  ) {
+    return (callback && callback(null, ""));
+  }
 
   function addMarkdownIncludes(fileContent: string) {
     var res = fileContent;
@@ -32,7 +38,7 @@ const markdownLoader: Loader = function (source) {
       matches.forEach(match => {
         const replacer = new RegExp(match, 'g');
         if (match.startsWith('{@include: ')) {
-          const includeFile = match.substring(11, match.length-1);
+          const includeFile = match.substring(11, match.length - 1);
           const fullPath = path.join(markdownFilepath, includeFile);
           if (fs.existsSync(fullPath)) {
             var includeFileContent = fs.readFileSync(fullPath, "utf8");
@@ -44,14 +50,14 @@ const markdownLoader: Loader = function (source) {
           }
         }
         else {
-          const parts = match.substr(2,match.length-3).split(': ');
+          const parts = match.substr(2, match.length - 3).split(': ');
           if (parts.length === 2) {
             if (options.embeds) {
               for (const embed of options.embeds) {
                 if (embed.key === parts[0]) {
                   const embedResult = embed.embedFunction(parts[1]);
                   res = res.replace(replacer, embedResult);
-                }  
+                }
               }
             }
           }
@@ -68,18 +74,18 @@ const markdownLoader: Loader = function (source) {
       if (!placeHolders) {
         placeHolders = [];
       }
-      placeHolders.push({ key: '{ContainerMarkdown}', value: markdownFilename } );
+      placeHolders.push({ key: '{ContainerMarkdown}', value: markdownFilename });
       placeHolders.forEach(replacement => {
         const replacer = new RegExp(replacement.key, 'g');
         res = res.replace(replacer, replacement.value);
       });
     }
     return res;
-  }    
+  }
 
   fileString = replacePlaceHolders(addMarkdownIncludes(fileString));
 
   return (callback && callback(null, fileString));
 };
- 
+
 export default markdownLoader;
