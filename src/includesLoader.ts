@@ -24,10 +24,9 @@ const markdownLoader: Loader = function (source) {
   const markdownFilename = path.basename(this.resourcePath);
   const markdownFilepath = path.dirname(this.resourcePath);
 
-  if (
-    options.sharedFolders &&
-    options.sharedFolders.find(e => this.resourcePath.indexOf(path.resolve(e.target)) === 0)
-  ) {
+  // Do not load and render markdown files without docusaurus header.
+  // These files are only used to be included in other files and should not generate their own web page
+  if (fileString.length >= 3 && fileString.substring(0,3) !== '---') {
     return (callback && callback(null, ""));
   }
 
